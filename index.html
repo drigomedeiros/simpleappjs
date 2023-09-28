@@ -18,13 +18,16 @@
     </div>
   </script>
 </head>
-<body id="simpleRoot" class="hold-transition sidebar-mini layout-fixed">
+<body>
     
 </body>
-<script src="/js/simple.js"></script>
+<!-- Mustache -->
+<script src="simple_modules/mustache/mustache.min.js"></script>
+<!-- Simple app -->
+<script src="js/simple.js"></script>
 <script language="javascript">
   new SimpleApp(
       Mustache
-  ).run(true, "/app/", "/app/login");
+  ).run(false, "/server/");
 </script>
 </html>
