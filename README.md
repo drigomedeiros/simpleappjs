@@ -14,9 +14,9 @@ The **Simple APP** has the Single Page index.html that is in charge for loading 
 
 **Simple Links** are where the magic lives. In order to always have the partial content rendered by the server inserted in the **contentRoot** element instead of navigating through pages, all the navigation links must have an event listener to do so. Simple App calls it Simple Links. So, every time that you need to load, in the server, a content that contains a link that has to be loaded on the contentRoot, this link must be defined as below:
 
-    <a href="whatever" class=".simpleNavigation" simple-target="/sever/path/to/content">My link</a>
+    <a href="whatever" class="simpleNavigation" simple-target="/sever/path/to/content">My link</a>
 
-Simple App gets all the elements with class **".simpleNavigation",** intercepts the click event and make a call to the server in the address defined on **"simple-target"** attribute.
+Simple App gets all the elements with class **"simpleNavigation",** intercepts the click event and make a call to the server in the address defined on **"simple-target"** attribute.
 
 Voilá, Single Page Application is running.
 
