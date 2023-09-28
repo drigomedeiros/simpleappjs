@@ -4,19 +4,19 @@ Welcome to Simple App JS, all and only Javascript you need in order to build a S
 
 ## Context
 
-The web development landed on a standard of developing frontend applications running fully on browser, taking over not only DOM events, but also content redering. Despite all the upside on this approach and all the amazing frameworks built on top of it, the fact is that HTML redering can be perfectly and efficiently made on the server. Of course we don't need fully HTML page redenring and sometimes we need authorization to access some contents. That's when **Simple App** comes in handy. It consists on 2 script files and 2 simple HTML pages to handle server requests and insert the content in the page, in the most simple way existent - html + javascript: no bundles, no frameworks, no (except for Mustache) dependencies, only event listeners on anchors and http calls.
+The web development landed on a standard of developing frontend applications running fully on browser, taking over not only DOM events, but also content rendering. Despite all the upside on this approach and all the amazing frameworks built on top of it, the fact is that HTML rendering can be perfectly and efficiently made on the server. Of course we don't need fully HTML page rendering and sometimes we need authorization to access some contents. That's when **Simple App** comes in handy. It consists on 2 script files and 2 simple HTML pages to handle server requests and insert the content in the page, in the most simple way existent - html + javascript: no bundles, no frameworks, no (except for Mustache) dependencies, only event listeners on anchors and http calls.
 
 ## How does it work
 
-The **Simple APP** has the Single Page index.html that is in charge for loading simple.js and load the first content coming from the server into HTML body. This first content must be the body template for the whole application and must contain the **Simple Links** and a **HTML element with id "contentRoot"**, where all the subsequents contents will be loaded.
+The **Simple APP** has the Single Page index.html that is in charge for loading simple.js and load the first content coming from the server into HTML body. This first content must be the body template for the whole application and must contain the **Simple Links** and a **HTML element with id "contentRoot"**, where all the subsequent contents will be loaded.
 
 ### Simple Links
 
 **Simple Links** are where the magic lives. In order to always have the partial content rendered by the server inserted in the **contentRoot** element instead of navigating through pages, all the navigation links must have an event listener to do so. Simple App calls it Simple Links. So, every time that you need to load, in the server, a content that contains a link that has to be loaded on the contentRoot, this link must be defined as below:
 
-    <a href="whatever" class=".simpleNavigation" simple-target="/sever/path/to/content">My link</a>
+    <a href="whatever" class="simpleNavigation" simple-target="/sever/path/to/content">My link</a>
 
-Simple App gets all the elements with class **".simpleNavigation",** intercepts the click event and make a call to the server in the address defined on **"simple-target"** attribute.
+Simple App gets all the elements with class **"simpleNavigation",** intercepts the click event and make a call to the server in the address defined on **"simple-target"** attribute.
 
 Voilá, Single Page Application is running.
 
@@ -28,7 +28,7 @@ This way of doing it prevent all browser navigation to protected contents since 
 
 ## Using Simple App JS
 
-That can't be simpler: copy this project content and paste on the static root of your server side HTML rendering MVC project. You can add your own script files, CSS, package.json dependencies and stuff to be referenced in server rendered pages or to give style and behavior for the index and login HTML files. Afterwards, use npm to install with `npm install` command and `npm build` to create the **simple_modules** folder for dependencies (needed to use Mustache template engine) =).
+That can't be simpler: copy this project content and paste on the static root of your server side HTML rendering MVC project. You can add your own script files, CSS, package.json dependencies and stuff to be referenced in server rendered pages or to give style and behavior for the index and login HTML files. Afterwards, use npm to install with `npm install` command and `npm run build` to create the **simple_modules** folder for dependencies (needed to use Mustache template engine) =).
 
 ### Usage example
 
