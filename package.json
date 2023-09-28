@@ -8,7 +8,8 @@
   "license": "ISC",
   "scripts": {
     "build": "gulp",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "start": "http-server ."
   },
   "dependencies": {
     "mustache": "^4.2.0"

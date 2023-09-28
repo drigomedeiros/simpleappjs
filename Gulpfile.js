@@ -28,4 +28,4 @@ async function delNodeModules() {
     fs.rmSync('node_modules', { recursive: true, force: true });
 }
 
-exports.default = series(delSimpleModules, mountModules, delNodeModules)
+exports.default = series(delSimpleModules, mountModules)
