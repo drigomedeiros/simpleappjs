@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Application</title>
+  <script id="error.mustache" type="x-tmpl-mustache">
+    <div style="text-align: center; padding-top: 10px;">
+        <h2 class="headline text-danger">{{errorCode}}</h2>
+        <div class="error-content">
+            <h3><i class="fas fa-exclamation-triangle text-danger"></i>{{errorMessage}}</h3>
+        </div>
+    </div>
+  </script>
+  <script id="loading.mustache" type="x-tmpl-mustache">
+    <div style="text-align: center; padding-top: 10px;">
+        <div class="spinner-border text-secondary" style="text-align: center; vertical-align: middle;"></div>
+    </div>
+  </script>
+</head>
+<body id="simpleRoot" class="hold-transition sidebar-mini layout-fixed">
+    
+</body>
+<script src="/js/simple.js"></script>
+<script language="javascript">
+  new SimpleApp(
+      Mustache
+  ).run(true, "/app/", "/app/login");
+</script>
+</html>
