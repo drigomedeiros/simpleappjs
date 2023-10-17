@@ -19,7 +19,7 @@ function login(event) {
             })
             .then((response) => {  
                 if (response.status == 200) {
-                    sessionStorage.setItem('Authorization', response.headers.get('Authorization'));
+                    sessionStorage.setItem('authorized', true);
                     window.location.href = "/";
                     resolve("OK");
                 } else {

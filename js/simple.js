@@ -20,8 +20,7 @@ class SimpleApp {
             window.location.href = "login.html";
             return "Simple App is secured and needs authentication";
         }
-
-        
+    
     }
 
     getContent(url, htmlElement, addLoading = true) {
@@ -36,7 +35,8 @@ class SimpleApp {
             }
             let self = this;
             fetch(url, {
-                headers: {"Authorization": sessionStorage.getItem("Authorization")},
+                mode: "same-origin",
+                credentials: "same-origin",
                 type: "GET"
             })
             .then((response) => response.text())
@@ -80,7 +80,7 @@ class SimpleApp {
         Array.from(htmlElements).forEach(element => {
             if(element.getAttribute("simple-target") == undefined){
                 allHave = false;
-                return;
+                return allHave;
             }
         });
         return allHave;
@@ -90,6 +90,10 @@ class SimpleApp {
         while(parsedElement.body.children.length > 0) {
             htmlElement.appendChild(parsedElement.body.children[0]);
         }
+    }
+
+    containsOtherThanScript(parsedElement) {    
+        return Array.from(parsedElement.body.children).filter(element => element.tagName != "SCRIPT").length > 0;
     }
 
     executeScripts(htmlElement) {
@@ -126,7 +130,7 @@ class SimpleApp {
     }
     
     isUserAlreadyLoggedIn() {
-        return sessionStorage.getItem('Authorization') != null;
+        return sessionStorage.getItem('authorized') === "true";
     }
 
 }
