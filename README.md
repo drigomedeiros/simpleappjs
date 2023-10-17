@@ -31,9 +31,9 @@ That can't be simpler: copy this project content and paste on the static root of
 
 ### Usage example
 
-In this same repository you can find an usage example of Simple App JS on [branch simple_example]("https://github.com/drigomedeiros/simpleappjs/tree/simple_example"). Do the same steps to have the application builded: 1) `npm install`; 2) `npm run build`. Then run the app with `npm run start`. Access [http://localhost:8080](http://localhost:8080) in the browser and see it working.
+In this same repository you can find an usage example of Simple App JS on ["https://github.com/drigomedeiros/simpleappjs/tree/simple_example"] (branch simple_example). Do the same steps to have the application builded: 1) `npm install`; 2) `npm run build`. Then run the app with `npm run start`. Access [http://localhost:8080](http://localhost:8080) in the browser and see it working.
 
-If you want an example with AdminLTE style and Jakarta EE application, you can go to [Users MVC application]("https://github.com/drigomedeiros/users-mvc").  
+If you want an example with AdminLTE style and Jakarta EE application, you can go to ["https://github.com/drigomedeiros/users-mvc"] (Users MVC application).  
 
 ## Documentation
 
