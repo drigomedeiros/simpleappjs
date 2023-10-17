@@ -6,7 +6,7 @@
   <title>Simple Application - Login</title>
 </head>
 <body>
-    <form action="/app/login" method="post" id="formLogin" onSubmit="login(event)">
+    <form action="/app/login" method="post" id="formLogin">
         <div>
             <input id="username" name="username" type="text" placeholder="username">
         </div>
@@ -14,7 +14,7 @@
             <input id="password" name="password" type="password" placeholder="Password">
         </div>
         <div>
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block" onclick="login(event)">Sign In</button>
         </div>
     </form>
     <!-- Single Page Partial Loading -->

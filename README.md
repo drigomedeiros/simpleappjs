@@ -4,7 +4,7 @@ Welcome to Simple App JS, all and only Javascript you need in order to build a S
 
 ## Context
 
-The web development landed on a standard of developing frontend applications running fully on browser, taking over not only DOM events, but also content rendering. Despite all the upside on this approach and all the amazing frameworks built on top of it, the fact is that HTML rendering can be perfectly and efficiently made on the server. Of course we don't need fully HTML page rendering and sometimes we need authorization to access some contents. That's when **Simple App** comes in handy. It consists on 2 script files and 2 simple HTML pages to handle server requests and insert the content in the page, in the most simple way existent - html + javascript: no bundles, no frameworks, no (except for Mustache) dependencies, only event listeners on anchors and http calls.
+The web development landed on a standard of developing frontend applications running fully on browser, taking over not only DOM events, but also content rendering. Despite all the upsides on this approach and all the amazing frameworks built on top of it, the fact is that HTML rendering can be perfectly and efficiently made on the server. Of course we don't need fully HTML page rendering and sometimes we need authorization to access some contents. That's when **Simple App** comes in handy. It consists on 2 script files and 2 simple HTML pages to handle server requests and insert the content in the page, in the most simple way existent - html + javascript: no bundles, no frameworks, no (except for Mustache) dependencies, only event listeners on anchors and http calls.
 
 ## How does it work
 
@@ -22,9 +22,8 @@ Voilá, Single Page Application is running.
 
 ### Securing the application
 
-The majority of enterprise application needs to be secured behind some authorization mechanism. Server side HTML applications with browser navigation might do that defining cookies. Despite it is a standard approach, security recommendations always say that it's better to do so with JWT tokens on HTTP Headers. Simple App to the rescue!
-Since Simple App is making calls to the server, there is no problem on handling and sending headers. To do so, it provides a login page that sends username and password provided by the user to any token issuer endpoint and store the JWT on browser session storage (only alive when window/tab is opened). After the log in, all the requests will include the server provided JWT token. 
-This way of doing it prevent all browser navigation to protected contents since the browser, by default, doesn't send the JWT token.
+The majority of enterprise application needs to be secured behind some authorization mechanism. Server side HTML applications with browser navigation might do that defining cookies. And so will we!
+Since Simple App is making calls to the server, there is no problem on handling and sending http only cookies. To do so, it provides a login page that sends username and password provided by the user to any token issuer endpoint that sets a http only cookie in the browser. The simple app still saves that the authentication had occurred on browser session storage (only alive when window/tab is opened). After the log in, all the requests will include the server defined http only cookie.
 
 ## Using Simple App JS
 
@@ -32,9 +31,9 @@ That can't be simpler: copy this project content and paste on the static root of
 
 ### Usage example
 
-In this same repository you can find an usage example of Simple App JS on [branch simple_example]("https://github.com/drigomedeiros/simpleappjs/tree/simple_example"). Do the same steps to have the application builded: 1) `npm install`; 2) `npm run build`. Then run the app with `npm run start`. Access [http://localhost:8080](http://localhost:8080) in the browser and see it working.
+In this same repository you can find an usage example of Simple App JS on ["https://github.com/drigomedeiros/simpleappjs/tree/simple_example"] (branch simple_example). Do the same steps to have the application builded: 1) `npm install`; 2) `npm run build`. Then run the app with `npm run start`. Access [http://localhost:8080](http://localhost:8080) in the browser and see it working.
 
-If you want an example with AdminLTE style and Jakarta EE application, you can go to [Users MVC application]("https://github.com/drigomedeiros/users-mvc").  
+If you want an example with AdminLTE style and Jakarta EE application, you can go to ["https://github.com/drigomedeiros/users-mvc"] (Users MVC application).  
 
 ## Documentation
 
