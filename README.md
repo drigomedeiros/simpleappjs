@@ -16,7 +16,7 @@ Simple APP JS uses parcel as its bundler and to see it working in your local, ju
 
 ### Usage example
 
-In this same repository you can find an usage example of Simple App JS on ["https://github.com/drigomedeiros/simpleappjs/tree/simple_example"] (branch simple_example). Do the same steps to have the application builded: 1) `npm install`; 2) `npm run start`. Access [http://localhost:1234](http://localhost:1234) in the browser and see it working.
+In this same repository you can find an usage example of Simple App JS on ["https://github.com/drigomedeiros/simpleappjs/tree/admin-lte"] (branch admin-lte). Do the same steps to have the application builded: 1) `npm install`; 2) `npm run start`. Access [http://localhost:1234](http://localhost:1234) in the browser and see it working.
 
 In this example I'm reproducing the AdminLTE showcase.
 
