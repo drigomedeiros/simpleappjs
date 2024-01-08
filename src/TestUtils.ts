@@ -1,0 +1,1 @@
+export const ignoreBlanks = (text: string) => text.replace(/\s/g, '');
