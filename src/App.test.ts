@@ -1,4 +1,5 @@
 import { App } from './App';
+import { PageNotFoundComponent } from './components/error/PageNotFoundComponent';
 
 describe('App', () => {
 
@@ -44,18 +45,12 @@ describe('App', () => {
     });
 
     it('should render page not found when there is no controller for the current route', async () => {
-        const pageNotFoundComponent = {
-            render: async () => 'Page not found',
-            applyDomChanges: () => {},
-            getData: async () => new Map<string, object>(),
-        }
-
-        let app = new App('/third-content', baseContentComponent, pageNotFoundComponent);
+        let app = new App('/third-content', baseContentComponent, new PageNotFoundComponent());
         app.addPageController(ordinaryContentPageController);
         app.addPageController(secondContentPageController);
         await app.init();
 
-        expect(document.body.innerHTML).toBe('<h1>Base content</h1><div id="contentRoot">Page not found</div>');
+        expect(document.body.innerHTML).toBe('<h1>Base content</h1><div id="contentRoot"><div>Page not found</div></div>');
     });
 
     it('should render error message when there is no contentRoot in main page', async () => {
